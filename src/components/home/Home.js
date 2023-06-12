@@ -1,9 +1,9 @@
 import React from 'react';
-import Hero from '../hero/Hero';
+import HeroPage from '../hero/HeroPage';
 
 const Home = ({movies}) => {
   return (
-    <Hero movies={movies} />
+    <HeroPage movies={movies} />
   )
 }
 
