@@ -8,6 +8,7 @@ import Header from '../header/Header';
 
 const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
 
+    console.log(reviews);
     const revText = useRef();
     let params = useParams();
     const movieId = params.movieId;
@@ -23,7 +24,7 @@ const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
 
         try {
             const response = await api.post("/api/v1/reviews", { reviewBody: rev.value, imdbId: movieId });
-
+            console.log(reviews);
             const updatedReviews = [...reviews, { body: rev.value }];
 
             rev.value = "";
@@ -59,9 +60,10 @@ const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
                     reviews?.map((r) => {
                         return (
                             <>
-                                <Row>
+                                <Row key={r.body}>
                                     <Col>{r.body}</Col>
                                 </Row>
+                                <hr />
                             </>
                         )
                     })
