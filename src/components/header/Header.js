@@ -1,10 +1,10 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideoSlash } from '@fortawesome/free-solid-svg-icons';
-import { Button } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
@@ -21,8 +21,8 @@ const Header = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <NavLink classname="nav-link" to="/">Home</NavLink>
-                        <NavLink classname="nav-link" to="/watchList">WatchList</NavLink>
+                        <Nav.Link classname="nav-link" to="/">Home</Nav.Link>
+                        <Nav.Link classname="nav-link" to="/watchList">WatchList</Nav.Link>
                     </Nav>
                     <Button variant="outline-info" className="me-2">Login</Button>
                     <Button variant="outline-info" className="me-2"> Register</Button>
