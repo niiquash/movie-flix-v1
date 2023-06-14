@@ -21,8 +21,8 @@ const Header = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link classname="nav-link" to="/">Home</Nav.Link>
-                        <Nav.Link classname="nav-link" to="/watchList">WatchList</Nav.Link>
+                        <NavLink className="nav-link" to="/">Home</NavLink>
+                        <NavLink className="nav-link" to="/watchList">WatchList</NavLink>
                     </Nav>
                     <Button variant="outline-info" className="me-2">Login</Button>
                     <Button variant="outline-info" className="me-2"> Register</Button>

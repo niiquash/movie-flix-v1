@@ -3,7 +3,8 @@ import api from './api/axiosConfig';
 import { useState, useEffect } from 'react';
 import Layout from './components/Layout';
 import { Routes, Route } from 'react-router-dom';
-import Home from './components/home/Home'
+import Home from './components/home/Home';
+import Trailer1 from './components/trailer/Trailer1'
 
 function App() {
 
@@ -26,10 +27,11 @@ function App() {
 
   return (
     <div className="App">
-      
+
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home movies={movies} />}></Route>
+          <Route path="/Trailer/:ytTrailerId" element={<Trailer1 />}></Route>
         </Route>
       </Routes>
 
